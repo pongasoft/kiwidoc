@@ -1,0 +1,43 @@
+/*
+ * Copyright (c) 2012 Yan Pujante
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+apply plugin: 'groovy'
+
+dependencies {
+  compile project(':utils:com.pongasoft.util.core')
+  compile project(':utils:com.pongasoft.util.io')
+  compile project(':kiwidoc:com.pongasoft.kiwidoc.model')
+  compile spec.external.commonsVfs
+  compile spec.external.asm
+  compile spec.external.bnd
+  compile spec.external.json
+  compile spec.external.commonsLogging
+  compile spec.external.linkedinUtilsCore
+
+  groovy spec.external.groovy
+
+  testCompile spec.external.junit
+  testCompile project(':kiwidoc:com.pongasoft.kiwidoc.testdata')
+
+  runtime spec.external.slf4jLog4j
+}
+
+def testDataProject = evaluationDependsOn(':kiwidoc:com.pongasoft.kiwidoc.testdata')
+
+test {
+  systemProperties["testdata.build.dir"] = new File(testDataProject.buildDir, "classes/main")
+  systemProperties["testdata.src.dir"] = new File(testDataProject.projectDir, "src/main/java")
+}

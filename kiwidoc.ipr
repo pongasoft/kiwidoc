@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AntConfiguration">
+    <defaultAnt bundledAnt="true" />
+  </component>
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions>
+      <entry name=".+\.(properties|xml|html|dtd|tld)" />
+      <entry name=".+\.(gif|png|jpeg|jpg)" />
+    </resourceExtensions>
+    <wildcardResourcePatterns>
+      <entry name="!?*.groovy" />
+      <entry name="!?*.java" />
+    </wildcardResourcePatterns>
+    <annotationProcessing enabled="false" useClasspath="true" />
+  </component>
+  <component name="CopyrightManager" default="LinkedIn Apache 2.0">
+    <copyright>
+      <option name="notice" value="Copyright (c) 2012 Yan Pujante&#10;&#10;Licensed under the Apache License, Version 2.0 (the &quot;License&quot;); you may not&#10;use this file except in compliance with the License. You may obtain a copy of&#10;the License at&#10;&#10;http://www.apache.org/licenses/LICENSE-2.0&#10;&#10;Unless required by applicable law or agreed to in writing, software&#10;distributed under the License is distributed on an &quot;AS IS&quot; BASIS, WITHOUT&#10;WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the&#10;License for the specific language governing permissions and limitations under&#10;the License." />
+      <option name="keyword" value="Copyright" />
+      <option name="allowReplaceKeyword" value="" />
+      <option name="myName" value="LinkedIn Apache 2.0" />
+      <option name="myLocal" value="true" />
+    </copyright>
+    <module2copyright>
+      <element module="All" copyright="LinkedIn Apache 2.0" />
+    </module2copyright>
+  </component>
+  <component name="DependencyValidationManager">
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
+  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
+  <component name="EntryPointsManager">
+    <entry_points version="2.0" />
+  </component>
+  <component name="GradleUISettings">
+    <setting name="root" />
+  </component>
+  <component name="GradleUISettings2">
+    <setting name="root" />
+  </component>
+  <component name="IdProvider" IDEtalkID="11DA1DB66DD62DDA1ED602B7079FE97C" />
+  <component name="InspectionProjectProfileManager">
+    <profiles>
+      <profile version="1.0" is_locked="false">
+        <option name="myName" value="Project Default" />
+        <option name="myLocal" value="false" />
+        <inspection_tool class="JavaDoc" enabled="false" level="WARNING" enabled_by_default="false">
+          <option name="TOP_LEVEL_CLASS_OPTIONS">
+            <value>
+              <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+              <option name="REQUIRED_TAGS" value="" />
+            </value>
+          </option>
+          <option name="INNER_CLASS_OPTIONS">
+            <value>
+              <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+              <option name="REQUIRED_TAGS" value="" />
+            </value>
+          </option>
+          <option name="METHOD_OPTIONS">
+            <value>
+              <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+              <option name="REQUIRED_TAGS" value="@return@param@throws or @exception" />
+            </value>
+          </option>
+          <option name="FIELD_OPTIONS">
+            <value>
+              <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="none" />
+              <option name="REQUIRED_TAGS" value="" />
+            </value>
+          </option>
+          <option name="IGNORE_DEPRECATED" value="false" />
+          <option name="IGNORE_JAVADOC_PERIOD" value="true" />
+          <option name="IGNORE_DUPLICATED_THROWS" value="false" />
+          <option name="IGNORE_POINT_TO_ITSELF" value="false" />
+          <option name="myAdditionalJavadocTags" value="" />
+        </inspection_tool>
+        <inspection_tool class="NullableProblems" enabled="false" level="WARNING" enabled_by_default="false">
+          <option name="REPORT_NULLABLE_METHOD_OVERRIDES_NOTNULL" value="true" />
+          <option name="REPORT_NOT_ANNOTATED_METHOD_OVERRIDES_NOTNULL" value="true" />
+          <option name="REPORT_NOTNULL_PARAMETER_OVERRIDES_NULLABLE" value="true" />
+          <option name="REPORT_NOT_ANNOTATED_PARAMETER_OVERRIDES_NOTNULL" value="true" />
+          <option name="REPORT_NOT_ANNOTATED_GETTER" value="true" />
+          <option name="REPORT_NOT_ANNOTATED_SETTER_PARAMETER" value="true" />
+          <option name="REPORT_ANNOTATION_NOT_PROPAGATED_TO_OVERRIDERS" value="true" />
+          <option name="REPORT_NULLS_PASSED_TO_NON_ANNOTATED_METHOD" value="true" />
+        </inspection_tool>
+      </profile>
+    </profiles>
+    <option name="PROJECT_PROFILE" value="Project Default" />
+    <option name="USE_PROJECT_PROFILE" value="true" />
+    <version value="1.0" />
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" />
+    <option name="OPTION_SCOPE" value="protected" />
+    <option name="OPTION_HIERARCHY" value="true" />
+    <option name="OPTION_NAVIGATOR" value="true" />
+    <option name="OPTION_INDEX" value="true" />
+    <option name="OPTION_SEPARATE_INDEX" value="true" />
+    <option name="OPTION_DOCUMENT_TAG_USE" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_VERSION" value="false" />
+    <option name="OPTION_DOCUMENT_TAG_DEPRECATED" value="true" />
+    <option name="OPTION_DEPRECATED_LIST" value="true" />
+    <option name="OTHER_OPTIONS" value="" />
+    <option name="HEAP_SIZE" />
+    <option name="LOCALE" />
+    <option name="OPEN_IN_BROWSER" value="true" />
+  </component>
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.builder/com.pongasoft.kiwidoc.builder.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.builder/com.pongasoft.kiwidoc.builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.index.api/com.pongasoft.kiwidoc.index.api.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.index.api/com.pongasoft.kiwidoc.index.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.index.impl/com.pongasoft.kiwidoc.index.impl.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.index.impl/com.pongasoft.kiwidoc.index.impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.model/com.pongasoft.kiwidoc.model.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.model/com.pongasoft.kiwidoc.model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.server/com.pongasoft.kiwidoc.server.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.server/com.pongasoft.kiwidoc.server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.testdata/com.pongasoft.kiwidoc.testdata.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.testdata/com.pongasoft.kiwidoc.testdata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.web/com.pongasoft.kiwidoc.web.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.web/com.pongasoft.kiwidoc.web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.web/com.pongasoft.kiwidoc.web-grailsPlugins.iml" filepath="$PROJECT_DIR$/kiwidoc/com.pongasoft.kiwidoc.web/com.pongasoft.kiwidoc.web-grailsPlugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.index.builder/com.pongasoft.tools.kiwidoc.index.builder.iml" filepath="$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.index.builder/com.pongasoft.tools.kiwidoc.index.builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.index.builder-impl/com.pongasoft.tools.kiwidoc.index.builder-impl.iml" filepath="$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.index.builder-impl/com.pongasoft.tools.kiwidoc.index.builder-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.repository.builder/com.pongasoft.tools.kiwidoc.repository.builder.iml" filepath="$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.repository.builder/com.pongasoft.tools.kiwidoc.repository.builder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.repository.builder-impl/com.pongasoft.tools.kiwidoc.repository.builder-impl.iml" filepath="$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.repository.builder-impl/com.pongasoft.tools.kiwidoc.repository.builder-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.static-generator/com.pongasoft.tools.kiwidoc.static-generator.iml" filepath="$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.static-generator/com.pongasoft.tools.kiwidoc.static-generator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.static-generator-impl/com.pongasoft.tools.kiwidoc.static-generator-impl.iml" filepath="$PROJECT_DIR$/tools/com.pongasoft.tools.kiwidoc.static-generator-impl/com.pongasoft.tools.kiwidoc.static-generator-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/com.pongasoft.tools.maven.runner/com.pongasoft.tools.maven.runner.iml" filepath="$PROJECT_DIR$/tools/com.pongasoft.tools.maven.runner/com.pongasoft.tools.maven.runner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/com.pongasoft.util.core/com.pongasoft.util.core.iml" filepath="$PROJECT_DIR$/utils/com.pongasoft.util.core/com.pongasoft.util.core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/com.pongasoft.util.html/com.pongasoft.util.html.iml" filepath="$PROJECT_DIR$/utils/com.pongasoft.util.html/com.pongasoft.util.html.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/com.pongasoft.util.io/com.pongasoft.util.io.iml" filepath="$PROJECT_DIR$/utils/com.pongasoft.util.io/com.pongasoft.util.io.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc.iml" filepath="$PROJECT_DIR$/kiwidoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kiwidoc/kiwidoc.iml" filepath="$PROJECT_DIR$/kiwidoc/kiwidoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tools/tools.iml" filepath="$PROJECT_DIR$/tools/tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utils/utils.iml" filepath="$PROJECT_DIR$/utils/utils.iml" />
+    </modules>
+  </component>
+  <component name="ProjectResources">
+    <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" project-jdk-name="1.6" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+  <component name="SvnBranchConfigurationManager">
+    <option name="mySupportsUserInfoFilter" value="true" />
+  </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
+  <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <UIState>
+          <splitter-proportions>
+            <SplitterProportionsDataImpl />
+          </splitter-proportions>
+          <settings />
+        </UIState>
+      </state>
+      <state key="Copyright.UI">
+        <UIState>
+          <splitter-proportions>
+            <SplitterProportionsDataImpl />
+          </splitter-proportions>
+        </UIState>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <UIState>
+          <splitter-proportions>
+            <SplitterProportionsDataImpl>
+              <option name="proportions">
+                <list>
+                  <option value="0.2" />
+                </list>
+              </option>
+            </SplitterProportionsDataImpl>
+          </splitter-proportions>
+          <last-edited>1.6</last-edited>
+        </UIState>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <UIState>
+          <splitter-proportions>
+            <SplitterProportionsDataImpl />
+          </splitter-proportions>
+          <settings />
+        </UIState>
+      </state>
+    </states>
+  </component>
+</project>
+

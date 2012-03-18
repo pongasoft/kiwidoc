@@ -1,0 +1,107 @@
+/*
+ * Copyright (c) 2012 Yan Pujante
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+#introduction ul {
+  margin: 0;
+  padding: 0.1em 0 0 1em;
+}
+
+#introduction li {
+  list-style: none;
+  background-image: url(/java/images/favicon_transparent.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  padding-left: 20px;
+}
+
+#content dt {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: inline-block;
+  background-image: url(/java/images/favicon_transparent.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 20px;
+}
+
+#content dt a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
+#content dt a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+#content dt a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+#content dd {
+  padding: 0 0 1em 20px;
+  margin: 0;
+  text-align: justify;
+}
+
+#content h2.heading {
+  margin-top: 0;
+}
+
+#sidebar-recommend dl {
+  background-color: #eeffee;
+  text-align: center;
+  margin-top: 0;
+  width:100%;
+}
+
+#sidebar-recommend dl dd {
+  padding: 1em 0 0 0;
+  margin-left: 0;
+}
+
+#sidebar-recommend dl {
+  float: left;
+}
+
+#sidebar-recommend img.amazon {
+  width: 75px;
+}
+
+#sidebar-recommend .recommendation {
+  float: left;
+  width: 50%;
+}
+
+.end-float {
+  clear: both;
+}
+
+#sidebar-recommend dd a:hover {
+  color: #ffffff;
+  background: none;
+}
+
+tt {
+  font-family: courier, monospace;
+  background: #EEEEEE;
+}
+
+.kiwidoc {
+  font-size: 1.2em;
+  font-weight: bold;
+}

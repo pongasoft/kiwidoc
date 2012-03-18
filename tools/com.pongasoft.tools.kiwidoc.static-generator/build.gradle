@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2012 Yan Pujante
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+import java.util.jar.JarEntry
+import java.util.jar.JarFile
+
+apply plugin: 'org.linkedin.release'
+apply plugin: 'org.linkedin.cmdline'
+
+dependencies {
+  lib project(':tools:com.pongasoft.tools.kiwidoc.static-generator-impl')
+}
+
+def webappProject = evaluationDependsOn(':kiwidoc:com.pongasoft.kiwidoc.web')
+
+cmdline {
+  dependsOn = [':kiwidoc:com.pongasoft.kiwidoc.web:war']
+}
+
+// customizing package-assemble task to add list of static files
+project.'package-assemble'.doLast {
+
+  def fileList = []
+
+  // info pages
+  tree = fileTree(dir: "${webappProject.projectDir}/grails-app/views/root",
+                  include: '**/*',
+                  excludes: ['index.gsp', '_*.gsp'])
+  tree.visit {element ->
+    if(element.file.isFile())
+    {
+      String path = element.relativePath.toString() - '.gsp'
+      fileList << "info/${path}"
+    }
+  }
+
+  // error pages
+  ['500', '503', '404'].each { code ->
+    fileList << "error/${code}"
+  }
+
+  // all other static pages
+  File webapp = webappProject.tasks.getByPath('package-war').artifactFile
+  JarFile jf = new JarFile(webapp)
+  fileList.addAll(jf.entries().findAll { JarEntry je ->
+    !je.name.endsWith('/') && !je.name.startsWith('META-INF') && !je.name.startsWith('WEB-INF')
+  })
+
+  File basePackage = project.convention.plugins.cmdline.assemblePackageFile
+  new File(basePackage, "conf/static.txt").text = fileList.join('\n')
+}

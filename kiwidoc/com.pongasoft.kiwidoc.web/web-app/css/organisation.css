@@ -1,0 +1,47 @@
+/*
+ * Copyright (c) 2012 Yan Pujante
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+#content .entries li.entry {
+  list-style: none;
+}
+
+#content .entries > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#content .entries li.entry {
+  list-style: none;
+  border: 1px solid #eeeeee;
+  margin: 0 0 2em 0;
+  padding: .5em;
+  overflow: auto;
+}
+
+#content .entries h3.entryName {
+  font-weight: bold;
+  font-size: 1.5em;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+  background: #ebffeb;
+  padding: 0 0 0.1em 0.1em;
+  margin: 0 0 1em 0;
+}
+
+#content .entries li.entry li {
+  list-style: none;
+}

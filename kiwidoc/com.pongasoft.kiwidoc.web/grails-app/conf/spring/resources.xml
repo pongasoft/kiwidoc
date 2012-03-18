@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) 2012 Yan Pujante
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License"); you may not
+  ~ use this file except in compliance with the License. You may obtain a copy of
+  ~ the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  ~ WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  ~ License for the specific language governing permissions and limitations under
+  ~ the License.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+  <!--
+  fileSystem(StandardFileSystemManager) {bean ->
+    bean.initMethod = "init"
+    bean.destroyMethod = "close"
+  }
+
+  TODO HIGH YP: DSL not working... 
+  root(fileSystem: "resolveFile", "file:///Users/yan@pongasoft.com/Desktop/junit/kiwidoc")
+
+  libraryStore(KiwidocLibraryStore, root)
+
+  -->
+
+  <!-- *********************************************************************** -->
+  <!-- * fileSystem                                                          * -->
+  <!-- *********************************************************************** -->
+  <bean id="fileSystem" class="org.apache.commons.vfs.impl.StandardFileSystemManager"
+        init-method="init"
+        destroy-method="close"/>
+
+  <bean id="root" factory-bean="fileSystem" factory-method="resolveFile">
+    <constructor-arg value="${kiwidoc.dir}"/>
+  </bean>
+
+  <!-- *********************************************************************** -->
+  <!-- * KiwidocLibraryStore                                                 * -->
+  <!-- *********************************************************************** -->
+  <bean id="libraryStore" class="com.pongasoft.kiwidoc.builder.KiwidocLibraryStoreImpl">
+    <property name="contentHandlers">
+      <bean class="com.pongasoft.kiwidoc.builder.ContentHandlersImpl">
+        <property name="root" ref="root"/>
+      </bean>
+    </property>
+  </bean>
+
+  <!-- *********************************************************************** -->
+  <!-- * PathManager (handles url to resource mapping)                       * -->
+  <!-- *********************************************************************** -->
+  <bean id="pathManager" class="com.pongasoft.kiwidoc.builder.path.URLPathManager"/>
+
+  <!-- *********************************************************************** -->
+  <!-- * PrefixIndex (for ajax class name searching)                         * -->
+  <!-- *********************************************************************** -->
+  <bean id="prefixIndex" class="com.pongasoft.kiwidoc.index.impl.prefix.impl.NoResultsPrefixIndex">
+  </bean>
+
+  <!-- *********************************************************************** -->
+  <!-- * KeywordIndex (for keyword search into javadoc, manifests...)        * -->
+  <!-- *********************************************************************** -->
+  <bean id="analyzer" class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+
+  <bean id="userDataExtractor" class="com.pongasoft.kiwidoc.index.impl.keyword.impl.ResourceExtractor"/>
+
+  <bean id="__directory" class="com.pongasoft.kiwidoc.index.impl.lucene.impl.LuceneDirectoryImpl"
+        abstract="true"
+        init-method="open"
+        destroy-method="close">
+    <property name="analyzer" ref="analyzer"/>
+    <property name="userDataExtractor" ref="userDataExtractor"/>
+  </bean>
+
+  <bean id="publicOnlyDirectory" parent="__directory">
+    <property name="directoryFactory">
+      <bean class="com.pongasoft.kiwidoc.index.impl.lucene.impl.FSDirectoryFactory">
+        <constructor-arg value="${caches.dir}/keyword/publicOnly"/>
+      </bean>
+    </property>
+  </bean>
+
+  <bean id="publicAndPrivateDirectory" parent="__directory">
+    <property name="directoryFactory">
+      <bean class="com.pongasoft.kiwidoc.index.impl.lucene.impl.FSDirectoryFactory">
+        <constructor-arg value="${caches.dir}/keyword/publicAndPrivate"/>
+      </bean>
+    </property>
+  </bean>
+
+  <bean id="keywordIndex" class="com.pongasoft.kiwidoc.index.impl.keyword.impl.KeywordIndexImpl">
+    <property name="analyzer" ref="analyzer"/>
+    <property name="publicAndPrivateDirectory" ref="publicAndPrivateDirectory"/>
+    <property name="publicOnlyDirectory" ref="publicOnlyDirectory"/>
+    <property name="resourceEncoder">
+      <bean factory-bean="userDataExtractor" factory-method="getResourceEncoder"/>
+    </property>
+  </bean>
+
+  <!-- *********************************************************************** -->
+  <!-- * KiwidocIndex: the full index                                        * -->
+  <!-- *********************************************************************** -->
+  <bean id="kiwidocIndex" class="com.pongasoft.kiwidoc.index.impl.KiwidocIndexImpl">
+    <property name="prefixIndex" ref="prefixIndex"/>
+    <property name="keywordIndex" ref="keywordIndex"/>
+    <property name="stats">
+      <bean class="com.pongasoft.util.io.IOUtils" factory-method="deserializeFromFile">
+        <constructor-arg value="${caches.dir}/stats.ser"/>
+      </bean>
+    </property>
+  </bean>
+
+</beans>

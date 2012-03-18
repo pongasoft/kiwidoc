@@ -1,0 +1,14 @@
+.metadata
+.gradle
+kiwidoc.iws
+kiwidoc/com.pongasoft.kiwidoc.web/lib
+kiwidoc/com.pongasoft.kiwidoc.web/plugins
+kiwidoc/com.pongasoft.kiwidoc.web/stacktrace.log
+out
+stacktrace.log
+pom2.xml
+kiwidoc/com.pongasoft.kiwidoc.web/web-app/WEB-INF/classes
+kiwidoc/com.pongasoft.kiwidoc.web/target
+.idea
+.DS_Store
+*.iml

@@ -1,0 +1,295 @@
+/*
+ * Copyright (c) 2012 Yan Pujante
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+/* inheritance */
+#inheritance ul li {
+  list-style: none;
+}
+
+#inheritance ul.extends {
+  font-family: courier, monospace;
+  padding: .5em .5em .5em 2em;
+  margin: 0;
+  overflow: auto;
+}
+
+#inheritance ul.implements {
+  padding: .5em .5em .5em 2em;
+  margin: 0 0 1em 0;
+  overflow: auto;
+}
+
+#inheritance li.implements {
+  display: inline;
+}
+
+#inheritance li.implements:before {
+  content: ',';
+}
+
+#inheritance li.i0:before {
+  content: '';
+}
+
+/* declaration */
+#declaration ul {
+  font-family: courier, monospace;
+  background: #eeeeee;
+  padding: .3em;
+  margin: 0 0 1em 0;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+#declaration ul li {
+  list-style: none;
+}
+
+#declaration ul li.extends {
+  padding-left: 1em;
+}
+
+#declaration ul li.implements {
+  padding-left: 1em;
+}
+
+#declaration .class {
+  font-weight: bold;
+}
+
+.methodInheritance dt {
+  margin: 1em 0.1em 0.1em 0.1em;
+  font-size: 1em;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.methodInheritance dd {
+  margin: 0.1em 0.1em 0.1em 2em;
+}
+
+/* inheritance */
+.ispacer {
+  padding-left: 2em;
+}
+
+.isymbol {
+  background-image: url(/java/images/icons/inherit.gif);
+  background-repeat: no-repeat;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+
+/* methods */
+#content .entries > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#content .entries li.entry {
+  list-style: none;
+  border: 1px solid #eeeeee;
+  margin: 0 0 2em 0;
+  padding: .5em;
+  overflow: auto;
+}
+
+#content .entries li.entryInternal {
+  border: 1px solid #ffebeb;
+}
+
+#content .entries h3.entryName {
+  font-weight: bold;
+  font-size: 1.3em;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+  background: #ebffeb;
+  padding: 0 0 0.1em 0.1em;
+  margin: 0 0 1em 0;
+  width: 100%;
+}
+
+#content .entries h3.entryName .method-links {
+  float: right;
+  margin-right: 0.1em;
+  font-size: 0.8em;
+}
+
+#content .entries h3.entryPublic {
+  background: #ebffeb;
+}
+
+#content .entries h3.entryInternal {
+  background: #ffebeb;
+}
+
+#content .entries .entrySpec {
+  clear: both;
+  font-family: courier, monospace;
+  margin: 0 0 1em 0.1em;
+}
+
+#content .entries .entrySpec .exception {
+  display: block;
+  margin-left: 1em;
+}
+
+.classDefinition {
+  overflow: auto;
+}
+
+/* annotations */
+.annotations ul {
+  font-family: courier, monospace;
+  font-size: 0.9em;
+  padding: 0;
+  background: #eeeeee;
+  padding: .3em;
+  margin: 0;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+.annotations ul li {
+  list-style: none;
+}
+
+/* Sidebar */
+#sidebar-inheritance div.implements, #sidebar-inheritance div.extends {
+  border-bottom: 1px solid #000000;
+}
+
+#sidebar-methods div.T-icon, #sidebar-fields div.T-icon {
+  padding-left: 10px;
+  min-height: 9px;
+}
+
+.viewMode-x #sidebar-methods li.A-icon, .viewMode-x #sidebar-fields li.A-icon {
+  padding-left: 8px;
+  min-height: 8px;
+}
+
+#sidebar-methods div.I-icon {
+  padding-left: 7px;
+  min-height: 9px;
+}
+
+#sidebar a.js {
+  display: inline;
+}
+
+#sidebar .inheritedMethod {
+  font-style: italic;
+}
+
+#sidebar .inheritedMethod a:visited {
+  color: #888888;
+}
+
+#sidebar .inheritedMethod a:link {
+  color: #888888;
+}
+
+#sidebar-methods h3 {
+  font-weight: bold;
+  display: inherit;
+  background-color: #eeffee;
+  padding: 0 1px 0 1px;
+  margin: 0 0.1em 0 0.1em;
+}
+
+#sidebar-methods .method-type {
+  padding-top: 0;
+  padding-bottom: 0.5em;
+}
+
+#sidebar-methods ul {
+  padding-top: 0;
+  max-height: 55em;
+}
+
+.warning-api-x {
+  color: red;
+  font-weight: bold;
+  font-size: 1.5em;
+  background-color: #ffeeee;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+/* Methods */
+.MP {
+  background-image: url(/java/images/icons/MP.png);
+}
+.MX {
+  background-image: url(/java/images/icons/MX.png);
+}
+.MD {
+  background-image: url(/java/images/icons/MD.png);
+}
+.MO {
+  background-image: url(/java/images/icons/MO.png);
+}
+
+.I-icon {
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.MI {
+  background-image: url(/java/images/icons/MI.png);
+}
+
+.MS {
+  background-image: url(/java/images/icons/MS.png);
+}
+
+#sidebar .inheritedMethod .I-icon {
+  background-image: none;
+}
+
+dl.extras {
+  border: solid 1px #eeeeee;
+  margin-top: 1em;
+  background: #fffffa;
+}
+
+.extras dt {
+  margin: 0em 0.1em 0.1em 0.1em;
+  font-size: 1.2em;
+  font-style: bold;
+  text-decoration: underline;
+}
+
+.extras dd {
+  margin: 0.1em 0.1em 0.1em 2em;
+}
+
+/* Fields */
+.FP {
+  background-image: url(/java/images/icons/FP.png);
+}
+.FX {
+  background-image: url(/java/images/icons/FX.png);
+}
+.FD {
+  background-image: url(/java/images/icons/FD.png);
+}
+.FO {
+  background-image: url(/java/images/icons/FO.png);
+}

@@ -1,0 +1,424 @@
+/*
+ * Copyright (c) 2012 Yan Pujante
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not
+ * use this file except in compliance with the License. You may obtain a copy of
+ * the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations under
+ * the License.
+ */
+
+html {
+  background: #FFFFFF;
+  color:#000000;
+  font-family: trebuchet ms, arial, sans-serif;
+  font-size: 0.9em;
+}
+
+#wrap {
+  min-width: 800px;
+  max-width: 1400px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Header */
+#header {
+  width: 100%;
+  float: left;
+}
+
+.viewMode-x #header {
+  background-color: #ffeeee;
+}
+
+.viewMode-p #header {
+  background: #eeeeee;
+}
+
+#header a#logo-link img {
+  border: none;
+}
+
+#header dl#logo {
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+#header dl#logo img {
+  padding: 0.1em;
+  margin: 0.1em;
+}
+
+#header dl#logo dd {
+  padding:0;
+  margin: 0;
+}
+
+#header dl#feedback {
+  float: right;
+  font-size: 1.1em;
+  font-weight: bold;
+  font-family: trebuchet ms, arial, sans-serif;
+  vertical-align: top;
+  padding-right: 1em;
+}
+
+#header dl#feedback dd {
+  padding:0;
+  margin: 0;
+}
+
+#header dl#feedback a:link {
+  text-decoration: none;
+  color: #ffffff;
+  background: #36702e;
+  padding: 0 5px 0 5px;
+}
+
+#header dl#feedback a {
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+  -moz-box-shadow: 2px 2px 2px rgba(0,0,0,0.6);
+}
+
+#header dl#feedback a:visited {
+  text-decoration: none;
+  color: #ffffff;
+  background: #36702e;
+}
+
+#header dl#feedback a:hover {
+  color: #36702e;
+  background: #eeeeee;
+}
+
+#header dl.entry {
+  float: left;
+  padding: 0 0 0 0.1em;
+  margin: 0;
+}
+
+#header dl.entry dd {
+  padding: 0.5em 0.5em 0 .5em;
+  margin: 0;
+}
+
+#header dl.entry input#k.yui-ac-input {
+  width: inherit;
+  position: inherit;
+}
+
+#header dl.entry div.yui-ac-container{
+  position: absolute;
+  top: inherit;
+  left: inherit;
+  width: inherit;
+  font-family: courier, monospace;
+  font-size: 0.9em;
+}
+
+#header dl.entry div.yui-ac-content {
+  width: inherit;
+  overflow: auto;
+}
+
+#header dl.entry div.yui-ac {
+  display: inline;
+}
+
+#header dl.entry div.yui-ac-container ul {
+  width: auto;
+}
+
+.yui-skin-sam .yui-ac-content li .highlight {
+  background-color: #faf585;
+}
+
+.yui-skin-sam .yui-ac-content li.yui-ac-highlight .highlight {
+  background-color: inherit;
+}
+
+/* highlighted results */
+.highlight {
+  font-weight: bold;
+}
+
+/* Content */
+#content-wrapper {
+  clear: both;
+}
+
+#content {
+  clear: both;
+  float: left;
+  width: 68%;
+  margin-right: 2%;
+  overflow: auto;
+  padding-bottom: 1px;
+}
+
+#content h2.heading {
+  letter-spacing: .1em;
+  padding-left: .3em;
+  background-color: #eeeeff;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+}
+
+#content h2.title {
+  letter-spacing: .1em;
+  font-size: 1.1em;
+  padding: 0 0 0 .3em;
+  margin: 0 0 1em 0;
+  background-color: #eeeeff;
+  border-bottom: 1px solid #aaaaaa;
+  border-right: 1px solid #aaaaaa;
+  overflow: auto;
+}
+
+#content a:link, #content a:visited {
+  text-decoration: none;
+}
+
+#content a:hover {
+  text-decoration: underline;
+}
+
+/* h1 */
+h1.heading {
+  float: left;
+  color: #FFFFFF;
+  background: url('/java/images/crumb_transparent_4px.png') repeat-y #36702e;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: sans-serif;
+  width: 100%;
+  padding: 0.1em 0 0.1em 0;
+  margin: 0 0 .5em -1px;
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+}
+
+h1.heading ul {
+  padding: 0;
+  margin: 0;
+  font-size: 0.5em;
+}
+
+h1.heading li {
+  display: inline;
+  padding: 0 0 0 0.3em;
+}
+
+h1.heading li:before {
+  content: ' > ';
+}
+
+h1.heading li.r0:before {
+  content: ''
+}
+
+h1.heading li.r0 {
+  border: none;
+  background: none;
+}
+
+h1.heading a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+h1.heading a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+h1.heading a:hover {
+  text-decoration: none;
+  color: #36702e;
+  background: #ffffff;
+}
+
+
+/* SideBar */
+#sidebar {
+  float: right;
+  width: 30%;
+  font-size: 0.8em;
+}
+
+#sidebar #sidebar-content {
+  margin: 0;
+  padding: 1em 0 10em 0.5em;
+  background: #eeeeee;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -webkit-box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  -moz-box-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+#sidebar a {
+  display: block;
+  white-space: nowrap;
+  width: 100%;
+}
+
+#sidebar a:link {
+  text-decoration: none;
+  color: #000000;
+}
+
+#sidebar a:visited {
+  text-decoration: none;
+  color: #000000;
+}
+
+#sidebar a:hover {
+  color: #ffffff;
+  background: #36702e;
+}
+
+#sidebar h2 a:link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#sidebar h2 a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#sidebar h2 a:hover {
+  color: #000000;
+  background: none;
+}
+
+#sidebar h2 {
+  margin: 0;
+  padding: 0.1em;
+  letter-spacing: .1em;
+  text-align: right;
+  color: #ffffff;
+  -moz-border-radius-topleft: 12px;
+  -webkit-border-top-left-radius: 12px;
+  background: url('/java/images/sidebar_heading_transparent_4px.png') repeat-y #36702e;
+}
+
+#sidebar .entry {
+  padding: 0;
+  margin: 0 .5em 1em 0;
+}
+
+#sidebar h3 {
+  display: none;
+}
+
+#sidebar ul {
+  background-color: #eeffee;
+  padding: .5em 1px 0.4em 1px;
+  margin: 0 0.1em 0 0.1em;
+  overflow: auto;
+  max-height: 35em;
+}
+
+#sidebar ul li {
+  list-style: none;
+}
+
+/* doc */
+.javadoc tt, .javadoc code {
+  font-family: courier, monospace;
+  background: #EEEEEE;
+}
+
+.javadoc pre {
+  font-family: courier, monospace;
+  padding-top: 1em;
+  background: #EEEEEE;
+  overflow: auto;
+  width: 100%;
+}
+
+/*.javadoc .inheritedDoc {*/
+  /*border: green 1px solid;*/
+/*}*/
+
+.javadoc .mainDocContent {
+  margin-bottom: 1.5em;
+}
+
+.javadoc .tags dt {
+  margin: 1em 0.1em 0.1em 0.1em;
+  font-size: 1.2em;
+  font-style: bold;
+  text-decoration: underline;
+}
+
+.javadoc .tags dd {
+  margin: 0.1em 0.1em 0.1em 2em;
+}
+
+.javadoc .tags dd .paramName {
+  font-family: courier, monospace;
+  background: #eeeeee;
+}
+
+.javadoc .tags dd .tagName {
+  display: none;
+}
+
+.javadoc .tags dd.misc .tagName {
+  display: inline;
+}
+
+/* Footer */
+#footer-wrapper {
+  clear: both;
+  border-top: 1px solid #ffffff;
+}
+
+#footer {
+  border-top: 1px solid #aaaaaa;
+  font-size: 0.9em;
+  margin-top: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 1em;
+}
+
+#footer-sitemap {
+  display: inline-block;
+  float: left;
+}
+
+#footer-copyright {
+  color: #36702e;
+  display: inline-block;
+  float: right;
+}
+
+#footer-copyright a:link {
+  color: #36702e;
+  text-decoration: none;
+}
+
+#footer-copyright a:hover {
+  color: #36702e;
+}
+
+#footer-copyright a:visited {
+  color: #36702e;
+  text-decoration: none;
+}

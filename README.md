@@ -76,7 +76,7 @@ kiwidoc is a functional reference tool, not a thinly-disguised advertising billb
 Overview
 ========
 
-[View the diagram](https://github.com/pongasoft/kiwidoc/raw/master/docs/images/kiwidoc.png)
+<img src="https://github.com/pongasoft/kiwidoc/raw/master/docs/images/kiwidoc.png">
 
 This picture represents an overview of the whole process:
 

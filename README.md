@@ -102,7 +102,7 @@ This will generate several executables each representing one of the box in the d
 Step 2
 ------
 
-Generating the kiwidoc can be more or less complicated so in order to bootstrap faster, you should download the pregenerated jdk 1.6 kiwidoc available on the *Downloads* page (TBD link) and simply untar in the data directory (`/export/content/pongasoft/kiwidoc/data`).
+Generating the kiwidoc can be more or less complicated so in order to bootstrap faster, you should download the pregenerated jdk 1.6 kiwidoc available on the [Downloads](https://github.com/pongasoft/kiwidoc/downloads) page and simply untar (bzip2 compressed) in the data directory (`/export/content/pongasoft/kiwidoc/data`).
 
 Step 3
 -------

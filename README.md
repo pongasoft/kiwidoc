@@ -17,7 +17,7 @@ kiwidoc is completely searchable. You can search javadoc content as well as mani
 
 Proximity searching
 -------------------
-When running a search, the current viewed resource (whether it is a class, a package, etc.) is always treated as the starting point for the search. The search is then expanded outward from that point. This provides very intuitive results that favor items 'closer' to the current resource. For example, if you are currently looking at the class java.util.HashMap (java/j2se/1.5) and you run a search for map, kiwidoc will automatically show you the class java.util.Map (java/j2se/1.5) as the first result, then the following results will be 'close' to this one (for example, other java.util.Map in other versions of the jdk, then it will expand to other libraries).
+When running a search, the current viewed resource (whether it is a class, a package, etc.) is always treated as the starting point for the search. The search is then expanded outward from that point. This provides very intuitive results that favor items 'closer' to the current resource. For example, if you are currently looking at the class `java.util.HashMap` (java/j2se/1.5) and you run a search for map, kiwidoc will automatically show you the class `java.util.Map` (java/j2se/1.5) as the first result, then the following results will be 'close' to this one (for example, other `java.util.Map` in other versions of the jdk, then it will expand to other libraries).
 
 Typeahead searching
 -------------------
@@ -76,7 +76,7 @@ kiwidoc is a functional reference tool, not a thinly-disguised advertising billb
 Overview
 ========
 
-!docs/images/kiwidoc.png!
+[View the diagram](https://github.com/pongasoft/kiwidoc/raw/master/docs/images/kiwidoc.png)
 
 This picture represents an overview of the whole process:
 
@@ -190,7 +190,7 @@ libs["com.linkedin.opensource/bobo-browse/2.0.5"] =
 def voldemort ="${basedir}/voldemort/0.51"
 
 def voldermortLibs = []
-new File("${voldemort}/lib").eachFile { voldermortLibs << it.canonicalPath }
+new File("${voldemort}/lib").eachFile { voldermortLibs.add(it.canonicalPath) }
 
 libs["com.linkedin.opensource/voldemort/0.51"] =
     [
